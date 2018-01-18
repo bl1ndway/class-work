@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS uzduotis @</title>
+
+    <script>
+        function showText() {
+
+            var t = document.getElementById("vardas").value;
+            document.getElementById("result").innerHTML =  "Labas rytas"  + t;
+            //console.log (t);
+        }
+        /*TAI = TAM*/
+    </script>
+</head>
+
+<body>
+    <h1>Hell world!</h1>
+    <div>
+        <button id="btn" onclick="showText()">Calculate</button>
+    </div>
+    <div>
+        <input type="text" id="vardas"> <!--/inputas turi toki dalyka kaip reiskme value, neturi vidinio html, kaip DIV-->
+    </div>
+    <div id="result">
+
+
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
