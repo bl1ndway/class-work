@@ -8,22 +8,38 @@
     <script>
         function showText() {
 
-            var t = document.getElementById("vardas").value;
-            document.getElementById("result").innerHTML =  "Labas rytas"  + t;
+            var vardas = document.getElementById("vardas").value;
+            var pavarde = document.getElementById("pavarde").value;
+
+            var kreipinys = pakeisti_teksta(vardas);
+            console.log("Labas "+kreipinys);
+            
+            var t = "labas rytas " + vardas + " " + pavarde + "!";
+
+            document.getElementById("result").innerHTML =  t;
             //console.log (t);
         }
         /*TAI = TAM*/
+
+        function pakeisti_teksta(tekstas) {
+            var pakeistas_tekstas = tekstas + "ai";
+            return pakeistas_tekstas;
+        }
     </script>
 </head>
 
 <body>
-    <h1>Hell world!</h1>
+    <h1>Helloo world!</h1>
     <div>
-        <button id="btn" onclick="showText()">Calculate</button>
+        <button id="btn" onclick="showText()">GO! </button>
     </div>
     <div>
-        <input type="text" id="vardas"> <!--/inputas turi toki dalyka kaip reiskme value, neturi vidinio html, kaip DIV-->
+        <input type="text" id="vardas" placeholder="Iveskite varda">
     </div>
+    <div>
+        <input type="text" id="pavarde" placeholder="Iveskite pavarde">
+    </div>
+        <!--/inputas turi toki dalyka kaip reiskme value, neturi vidinio html, kaip DIV-->
     <div id="result">
 
 
